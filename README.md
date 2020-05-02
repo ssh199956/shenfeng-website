@@ -1,6 +1,5 @@
 # 个人网站
-this is my test website ,made in 2019.1.4.
-
+This is my website. made in 2019.1.4.
 
 - [主页](http://sshlearning.com)
 - [大数据](https://data.sshlearning.com)
