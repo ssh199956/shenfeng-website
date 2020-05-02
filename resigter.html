@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<meta name="keywords" content=" />
+<meta name="description" content="" />
+<title></title>
+<link href="css/lrtk.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/login.css" />
+<script>
+				function showTips(spanID,msg){
+				//首先要获得要操作元素 span
+				var span = document.getElementById(spanID);
+				span.innerHTML = msg;
+			}
+			/*
+				校验用户名:
+				1.事件: onblur  失去焦点
+				2.函数: checkUsername()
+				3.函数去显示校验结果
+			*/
+			function checkUsername(){
+				//获取用户输入的内容
+				var uValue = document.getElementById("username").value;
+				//对输入的内容进行校验
+				//获得要显示结果的span
+				var span = document.getElementById("span_username");
+				if(uValue.length < 6){
+					//显示校验结果
+					span.innerHTML = "<font color='red' size='2'><b>对不起,太短<b></font>";
+					return false;
+				}else{
+					span.innerHTML = "<font color='red' size='2'><b>恭喜您,可用<b></font>";
+					return true;
+				}
+			}
+			
+			/*
+			 密码校验
+			 */
+			function checkPassword(){
+				//获取密码输入
+				var uPass = document.getElementById("password").value;
+				
+				var span = document.getElementById("span_password");
+				
+				//对密码输入进行校验
+				if(uPass.length < 6){
+					span.innerHTML = "<font color='red' size='2'><b>对不起,太短<b></font>";
+					return false;
+				}else{
+					span.innerHTML = "<font color='red' size='2'><b>恭喜您,够用<b></font>";
+					return true;
+				}
+			}
+			
+    function register(){
+        //alert() 弹出对话框
+        // console.log()
+        var uName=document.getElementById("username").value;
+        var pwd=document.getElementById("password").value;
+        localStorage.setItem(uName,pwd);  //数据库存储
+        //console.log(localStorage.getItem(uName))
+        if(uName.length>=6 && pwd.length>=6){
+        	
+        
+        alert("注册成功");
+        document.getElementById("username").value="";
+        document.getElementById("password").value="";
+        }
+        else{
+        	alert("您的用户名或者密码输入太短，请重新输入");
+        }
+    }
+    function login(){
+        var uName=document.getElementById("username").value;
+        var pwd=document.getElementById("password").value;
+        var lPwd=localStorage.getItem(uName);
+        if(pwd==lPwd && pwd.length>=6){
+        	alert("亲爱的会员您好，账号密码输入正确，如需登录请点击确认！")
+            location.href="index.html";
+        }else{
+            alert("You Fool");
+            document.getElementById("password").value="";
+        }
+    }
+    //  register()
+</script>
+</head>
+<body>
+<span class="toolbar"></span>
+<div class="g-body">
+    <div>
+    	<div id="warp">
+			<p><font size="7" color="#FF0000">欢迎进入本公司登录系统</font></p>
+			<div class="regist" align="center">
+			<div class="nn"><font size="6" color="#FFA500">会员注册</font>USER REGISTER</div>
+			<div class="ll">
+				用户名&nbsp;:&nbsp;<input type="text" id="username" onfocus="showTips('span_username','用户名长度不能小于6')" onblur="checkUsername()" onkeyup="checkUsername()" /><span id="span_username"></span><br>
+				<br>密&nbsp;&nbsp;&nbsp;码&nbsp;:&nbsp;<input type="password" id="password" onfocus="showTips('span_password','密码长度不能小于6')" onblur="checkPassword()" onkeyup="checkPassword()"/><span id="span_password"></span>
+				<br><br>
+				<div class="zz">
+					<input type="button" onclick="register()" value="注册"  />
+				<input type="button" onclick="login()" value="登录" />
+				
+				</div>
+			</div></div>
+		</div> </div>
+    <img src= />
+</div>
+<canvas id="snowFallTop" class="snowFall snowFallTop" width="1220" height="162" style="left: 321px;"></canvas>
+<canvas id="snowFallLeft" class="snowFall snowFallLeft" width="321" height="742" style="width: 321px;"></canvas>
+<canvas id="snowFallRight" class="snowFall snowFallRight" width="321" height="742" style="width: 321px;"></canvas>
+<script type="text/javascript" src="js/snow.min.js"></script>
+
+</body>
+</html>

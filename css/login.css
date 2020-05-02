@@ -1,0 +1,35 @@
+*{
+	margin: 0 auto;
+	overflow: auto;
+	width: auto;
+	height: auto;
+}
+body{
+	background:url(../img/body_bg.png) center ;
+	width: auto;
+	height: auto;
+}
+.regist{
+	width: 400px;
+	height: 250px;
+    border: 5px #FFA500 solid;
+	background: #FFFFFF;
+	text-align: left;
+	margin: 20px auto;
+}
+.ll{
+	margin:0px 0px 10px 20px;
+}
+.nn{
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.zz{
+	margin-left: 70px;
+}
+p{
+text-align: center;
+margin: 200px auto 0px auto;
+
+}

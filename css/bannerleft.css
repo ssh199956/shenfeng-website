@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+	font-family: Times New Roman;
+}
+a {
+	border: none;
+	text-decoration: none;
+	color: #000;
+}
+.center {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/*banner_y*/
+
+.banner_y {
+	width: 1200px;
+	height: 400px;
+}
+
+.banner_y .nav1 {
+	border: 1px #FF6700 solid;
+	float: left;
+	width: 190px;
+	height: 415px;
+	background: #ffffff;
+margin: 0px 5px;
+}
+
+.banner_y .nav1 ul {
+	padding: 20px 0;
+	position: relative;
+}
+
+.banner_y .nav1 ul li {
+	display: block;
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	padding: 0 30px;
+}
+
+.banner_y .nav1 ul li .pop {
+	width: 460px;
+	height: 413px;
+	background: #fff;
+	position: absolute;
+	left: 190px;
+	top: 0px;
+	display: none;
+	z-index: 10000;
+}
+
+.banner_y .nav1 ul li:hover .pop {
+	display: block;
+	box-shadow: 2px 3px 5px #ccc;
+	border-top: 1px solid #ccc;
+}
+.banner_y .nav1 ul li .pop a:hover {
+	display: block;
+	color: #fff;
+}
+
+.nav1 ul li:hover {
+	background: #ff6700;
+}
+
+.nav1 ul li a {
+	display: inline-block;
+	margin-left: 10px;
+	color: black;
+}
+.pop li:hover{
+	background: #8E8E8E;
+}
+.pop p{
+	
+	padding-left: 40px;
+	padding-top: 10px;
+}
+.lll:hover{
+	background: #8E8E8E;
+	
+}
+.pop span{
+	float: right;
+	padding-right:40px;
+}
