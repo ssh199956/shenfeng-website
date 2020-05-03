@@ -184,11 +184,17 @@ font {
 			 
 			  <div class="form-group">
 			    <div class="col-sm-offset-2 col-sm-10">
-			      <input type="submit"  width="100" value="提交" name="submit" border="0"
+			      <input type="submit"  width="100" value="提交" name="submit" border="0" onclick='dianji()'
 				    style="background: url('./images/register.gif') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 				    height:35px;width:100px;color:white;">
 			    </div>
 			  </div>
+			  <script type="text/javascript">
+			  function dianji(){
+			  	alert("您好，您的信息已提交，点击确定返回主页")
+			  location.href="index.html";
+			  }
+			  </script>
 			</form>
 	</div>
 	
